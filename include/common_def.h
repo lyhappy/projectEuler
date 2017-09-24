@@ -8,6 +8,7 @@ typedef int bool;
 #define NULL 0
 
 #include <assert.h>
+#include <stdio.h>
 
 #define print_test(test_fn) \
 	printf("------------ case of %s ------------\n", #test_fn); \
