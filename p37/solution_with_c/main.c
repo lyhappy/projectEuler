@@ -42,7 +42,7 @@ void test_is_interesting_prime() {
 }
 
 /* 最直接的办法，直接遍历所有数字
- */
+*/
 void get_all_interesting_prime(int r_max) {
 	int i = 5;
 	int c = 1;
@@ -68,8 +68,8 @@ int len = 2;
 void next_candidate_indexes() {
 	int i = 0;
 	if (digit_index[0] == 1) {
-	  digit_index[0] = 2;
-	  return;
+		digit_index[0] = 2;
+		return;
 	}
 
 	digit_index[0] = 1;
@@ -87,7 +87,7 @@ void next_candidate_indexes() {
 }
 
 /* 尝试生成所有候选数字
- */
+*/
 void get_all_interesting_prime_2() {
 	int lowest_digit[] = {3, 7};
 	int highest_digit[] = {2, 3, 5, 7};
@@ -117,7 +117,7 @@ void get_all_interesting_prime_2() {
 		next_candidate_indexes();
 	}
 	printf("answer: %d\n", sum);
-	
+
 }
 
 void sum_all_interesing_prime();
@@ -131,23 +131,23 @@ int main() {
 	print_test(test_is_interesting_prime);
 #endif
 	// cstart = clock();
-    gettimeofday(&cstart, NULL);	
+	gettimeofday(&cstart, NULL);	
 	get_all_interesting_prime(1000000);
-    gettimeofday(&cend, NULL);	
+	gettimeofday(&cend, NULL);	
 	printf("%ld cps microsecond\n", (cend.tv_sec - cstart.tv_sec) * 1000000 + cend.tv_usec - cstart.tv_usec);
 	// printf ("%.3f cpu sec\n", ((double)clock() - (double)cstart)* 1.0e-6);
 
 	// cstart = clock();
-    gettimeofday(&cstart, NULL);	
+	gettimeofday(&cstart, NULL);	
 	get_all_interesting_prime_2();
-    gettimeofday(&cend, NULL);	
+	gettimeofday(&cend, NULL);	
 	printf("%ld cps microsecond\n", (cend.tv_sec - cstart.tv_sec) * 1000000 + cend.tv_usec - cstart.tv_usec);
 	// printf ("%.3f cpu sec\n", ((double)clock() - (double)cstart)* 1.0e-6);
 
 	// cstart = clock();
-    gettimeofday(&cstart, NULL);	
+	gettimeofday(&cstart, NULL);	
 	sum_all_interesing_prime();
-    gettimeofday(&cend, NULL);	
+	gettimeofday(&cend, NULL);	
 	printf("%ld cps microsecond\n", (cend.tv_sec - cstart.tv_sec) * 1000000 + cend.tv_usec - cstart.tv_usec);
 	// printf ("%.3f cpu sec\n", ((double)clock() - (double)cstart)* 1.0e-6);
 }
