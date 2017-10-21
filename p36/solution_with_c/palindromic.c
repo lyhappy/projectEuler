@@ -11,22 +11,6 @@ bool is_palindromic_binary(int n) {
 	return n == b2;
 }
 
-#define positive_case_print(function, param) \
-	if (function(param)) { \
-		printf("case %d pass!\n", param); \
-	} else { \
-		printf("case %d failed!\n", param); \
-	}
-
-#define negative_case_print(function, param) \
-	if (!function(param)) { \
-		printf("case %d pass!\n", param); \
-	} else { \
-		printf("case %d failed!\n", param); \
-	}
-
-
-
 void test_ip_binary() {
 	positive_case_print(is_palindromic_binary, 1);
 	positive_case_print(is_palindromic_binary, 3);

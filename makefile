@@ -8,6 +8,10 @@ CFLAGSO = -Wall -O
 INCLUDE = -I ../../include/
 COMPILE.c += ${INCLUDE}
 
+vpath %.c .:../../lib
+vpath %.h ../../include
+vpath %.o ../../obj
+
 debug: CPPFLAGS += -DDEBUG -g
 debug: CFLAGS += -DDEBUG -g
 debug: main
